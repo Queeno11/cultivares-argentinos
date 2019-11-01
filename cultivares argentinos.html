@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--N.F. Abbate, P.E. Abbate, 518.-->
+<!--Informe online del rendimiento de los cultivares de trigo pan evaluados en la RET-INASE de Argentina-->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="google-site-verification" content="aMCOl_gfJGpr8oorexN7J78YwCtVu7sFf5DeDxFs4HQ" />
+	<meta name="description" content="Comparación del rendimiento de los cultivares (variedades) de trigo pan comercializados en Argentina, en más de 10 localidades." />
+	<meta name="keywords" content="variedades, estabilidad, subregiones, grano, yield, bread, wheat, on-line" />
+	<title>Informe online del rendimiento de los cultivares de trigo pan evaluados en la RET-INASE de Argentina</title>
+
+	<!--Google analytics-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122825060-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-122825060-5');
+	</script>
+	<script type="application/ld+json">
+	// Structured Data for Google search
+	{
+		"@context": "http://www.schema.org",
+		"@type": "Website",
+		"url": "https://cultivaresargentinos.000webhostapp.com/trigo",
+		"name": "Informe online del rendimiento de los cultivares de trigo pan evaluados en la RET-INASE de Argentina",
+		"author" : {
+				"@type" : "Person",
+				"name" : "N.F. Abbate, P.E. Abbate",
+				"email": "abbate.pablo@gmail.com"
+			},
+		"description": "Comparación del rendimiento de los cultivares (variedades) de trigo pan comercializados en Argentina, en más de 10 localidades",
+		"datePublished" : "22-jul-2018"
+	}
+    </script>
+    <!-- Fin Google analytics-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="Informe Online RET-INASE 14.js"></script>
+    
+    <link rel = "stylesheet" type = "text/css" href = "cultivares argentinos.css" />
+ 
+</head>
+<body>	
+<!--PEA: Para celular--><meta name="viewport" content="width=device-width, initial-scale=1"><!--PEA: FIN-->
+	
+<!--Botón Compartir de Facebook-->
+<!--
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+-->	
+	<div id="titulo">
+		<h1>INFORME ONLINE DEL RENDIMIENTO DE LOS CULTIVARES DE TRIGO PAN EVALUADOS EN LA RET-INASE DE ARGENTINA</h1>
+		<br><br><br>
+		<h2>ABBATE N.F. (estudiante FCE, UBA)<br>
+				ABBATE P.E. (INTA Balcarce, abbate.pablo@inta.gob.ar)<br>
+				<br>
+		<!--<h2> A 100 años de la obtención del primer cultivar de trigo Argentino: "38MA", por William O. Backhouse</h2>-->
+				PRIMERA PÁGINA WEB INTERACTIVA DESTINADA A LA ELECCIÓN DE CULTIVARES DE TRIGO <br>
+				<br>
+		</h2>
+	</div>
+	<div id="comentarios">
+		<h3>Esta página permite realizar una comparación online del rendimiento de cultivares de trigo pan comercializados en Argentina, los cuales se evalúan anualmente en la "Red de ensayos comparativos de cultivares de trigo" coordinada por el Instituto Nacional de Semillas (RET-INASE). 
+			La comparación utiliza el método propuesto por <a href="Abbate,_Aguate,_Del_Vecchio,_Balzarini._517.pdf">Abbate et al. (2017)</a>, el cual considera que para un productor es más importarte la comparación entre años dentro de una localidad, que la comparación entre localidades. 
+			Un resumen de las características de la RET-INASE puede consultarse en <a href="Abbate._518._Que_es_la_RET.pdf">Abbate (2018)</a>. 
+			Los datos originales e información complementaria de los ensayos pueden consultarse en la página de la <a href="https://www.argentina.gob.ar/inase/red-variedades-de-trigo">RET-INASE</a> o contactando al correspondiente colaborador/responsable de cada lugar de evaluación, el cual se muestra al seleccionar el lugar correspondiente. 
+			Una descripción de esta página puede consultarse en <a href="https://www.engormix.com/agricultura/articulos/informe-online-rendimiento-cultivares-t43505.htm">Abbate y Abbate (2019)</a>.<br>
+			<br>
+			Para consultar el Grupo de Calidad de los cultivares de trigo pan ir a: <a href="https://cultivaresargentinos.000webhostapp.com/trigo/grupos">GRUPO DE CALIDAD DE LOS CULTIVARES DE TRIGO PAN COMERCIALIZADOS EN ARGENTINA</a><br>
+			<br>
+			Para consultar sobre cultivares de cebada cervecera ir a: <a href="https://cultivaresargentinos.000webhostapp.com/cebada/">INFORME ONLINE DE LA RED ARGENTINA DE CEBADA CERVECERA</a><br>
+			<br>
+			Para consultar sobre cultivares de cebada forrajera ir a: <a href="https://cultivaresargentinos.000webhostapp.com/cebada/forrajera/">INFORME ONLINE DE CULTIVARES DE CEBADA DE GRANO FORRAJERO (CEBADAS FORRAJERAS) UTILIZADOS EN ARGENTINA</a>
+		</h3> 
+	</div>
+	<!-- Primera Columna de Controles -->	
+	<div class="container">
+		<div class="row">
+	  	<div class="col-lg-5">
+				<form id="form1" onchange="DrawChart()" >
+					<p><a data-toggle="modal" data-target="#modal_lugar" data-keyboard="true">Seleccionar <br>Ubicación de los ensayos:</a></p>
+					<select id="lugar">
+						<!--Select cargado por javascript-->
+					</select>
+					<p id="leyenda_tabla1">Detalles de los datos seleccionados:</p>
+					<div id="tabla1"></div>
+			  </form>	    
+			</div>
+
+	<!-- Modal Lugar -->
+	<div class="modal fade" id="modal_lugar" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Ubicación de los ensayos</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+						Los ensayos están identificados por: (1) la Subregión triguera (ver mapa), (2) la provincia, (3)la localidad cercana y (4) el nombre del sitio experimental. El análisis solo incluye lugares con datos de al menos dos campañas.<br><br></p>
+						<p style="text-align:center;"><img src="img/subregiones_trigueras_argentinas.jpg" style="width:50%;height:50%" alt="Mapa de las Subregiones trigueras argentinas"><br></p>
+					</div>				
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+<!-- Segunda Columna de Controles -->	
+			<div class="col-lg-3">
+				<form id="form2" onchange="DrawChart()" >
+					<p><a data-toggle="modal" data-target="#modal_anios" data-keyboard="true">Seleccionar <br>Cantidad de campañas promediadas:</a></p>
+					<select id="anios">
+						<option selected value="2">Últimas 2 campañas</option>
+						<option value="3">Últimas 3 campañas</option>
+						<option value="4">Últimas 4 campañas</option>
+					</select>
+				</form>
+				
+				<form id="form3" onchange="DrawChart()" >
+					<p><a data-toggle="modal" data-target="#modal_epocas" data-keyboard="true">Seleccionar <br>Época de siembra:</a></p>
+					<select id="epocas">
+						<!--Select cargado por javascript-->
+					</select>
+				</form>
+			</div>
+			<script>
+				Inicio();			</script>
+	<!-- Modal Anios -->
+	<div class="modal fade" id="modal_anios" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Cantidad de campañas promediadas</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+					Las campañas incluidas en el promedio se eligen a partir de la última; si la última campaña fue 2010/11, el promedio de 3 campañas incluye la campaña 2010/11 y las 2 campañas anteriores disponibles.
+					<br><br>
+					Los cultivares que se incluyen en la comparación son solo los que estuvieron presentes en todas las campañas promediadas.
+					<br><br>
+					El promedio de menos años incluye más cultivares; el promedio de más años permite una mejor estimación de la estabilidad.
+					<br>
+					</p>
+				</div>				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Modal Epocas -->
+		<div class="modal fade" id="modal_epocas" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Época de siembra</h4>
+						</div>
+						<div class="modal-body">
+							<p>
+							Existen cuatro épocas de siembra en cada Subregión separadas por 10-5 días. En la Tabla se presentan las fechas de siembra habituales de cada Subregión. 
+							Estas fechas de siembra pudieron retrasarse cuando se presentaron condiciones que impidieron la siembra en la fecha deseada. 
+							Cada criadero puede elegir hasta dos fechas de siembra para cada uno de sus cultivares. En consecuenta, la primera y terceta épocas reunen a la mayoría de los cultivares.<br><br>
+							</p>
+							<p style="text-align:center;"><img src="epocas_de_siembra_de_trigo.png" style="width:100%;height:100%" alt="Mapa de las Subregiones trigueras argetinas"><br></p>
+						</div>				
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+<!-- Tercera Columna de Controles -->	
+			<div class="col-lg-4">
+				<form id="form4" onchange="DrawChart()">
+					<p><a data-toggle="modal" data-target="#modal_manejo" data-keyboard="true">Seleccionar <br>Nivel de manejo:</a></p>
+					<select id="manejos">
+						<option id="RET" value="RET">RET sin fungicida</option>
+						<option id="RETF" selected value="RETF">RET con fungicida</option>
+						<option id="RETAT" value="RETAT">RET con alta tecnología</option>
+						<option id="RETT" value="RETT">RET con tecnología tradicional</option>
+					</select>
+				</form>
+				<form id="form5">
+					<p><a data-toggle="modal" data-target="#modal_calidad" data-keyboard="true">Seleccionar Grupos de Calidad <br>(sin seleccionar se muestran todos):</a></p>
+					<div id="grupos"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Manejo -->
+	<div class="modal fade" id="modal_manejo" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Nivel de manejo</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+					Se puede seleccionar uno de los niveles de manejo que se listan a continuación, pero debe tenerse en cuenta que no todos los niveles están disponibles en todas los lugares y en todos los años: 
+					<br><br>
+					RET sin fungicida: corresponde a la comparación de cultivares, sin la aplicación de fungicidas foliares.<br><br>
+					RET con fungicida: similar a la anterior pero con 1 ó 2 aplicaciones de fungicida para el control de enfermedades foliares.<br><br>
+					RET con alta tecnología: el manejo trata de maximizar el rendimiento por medio de la aplicación de mayor cantidad de insumos. 
+					Esto incluye doble aplicación de fungicida, fertilización en cantidad suficiente como para evitar limitación de nutrientes y riego para evitar pérdidas de rendimiento por deficiencia de agua.<br><br>
+					RET con tecnología tradicional (conducida solamente en INTA Balcarce): esta modalidad de manejo consiste en darle al cultivo una cantidad de
+					nutrientes apropiada para obtener un nivel de rendimiento menor que el de la RET con funguicida, pero con un menor costo productivo.<br> 
+					</p>
+				</div>				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Calidad -->
+	<div class="modal fade" id="modal_calidad" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Grupo de Calidad</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+						El Grupo de calidad es una clasificación de los cultivares realizada por el Comité de Cereales de Invierno de la Comisión Nacional de Semillas (CONASE) del Instituto Nacional de Semilla (INASE), por la cual los cultivares se categorizan en tres grupos. El Grupo 1 incluye a los cultivares de mayor calidad panadera y el Grupo 3 a los de menor. A los fines del análisis presentado en esta página, se definió el Grupo 4 que incluye a los cultivares de trigo blando. 
+						<br><br>
+						La clasificación por Grupos de calidad se basa en ocho variables: el peso hectolítrico del grano, el rendimiento porcentual de harina, el porcentaje de cenizas de la harina, la concentración de proteína del grano, la concentración de gluten de la masa, el W alveográfico de la masa, la estabilidad farinográfica de la masa y el volumen de pan. 
+						<br><br>
+						Téngase en cuenta que esta clasificación de calidad se refiere a los cultivares y no al grano cosechado. En una situación ambiental dada, es de esperar que con un cultivar de Grupo 1 se obtenga grano de mayor calidad panadera que con un cultivar de Grupo 3, pero la calidad de ambos cultivares puede ser mayor o menor según hayan sido la condición ambiental en la cual creció el cultivo. 
+						<br><br>
+						Por medio de este control se pueden comparar cultivares con distintas combinaciones de Grupos de Calidad (sin seleccionar ninguno se incluyen todos los grupos en el análisis).
+						</p>
+					</div>				
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+<!-- Mensaje: Sin datos -->
+	<div id="label1"></div>
+
+<!-- Figura y tabla -->
+	<div class="container gyt">
+		<div class="row">
+			<div class="col-md-6">
+				<!-- Botón de la leyenda FIGURA -->
+				<div id="boton1">	
+					<button type="button" class="btn btn-info btn-lg botonmodal" data-toggle="modal" data-target="#myModal1">Ver leyenda completa de la Figura</button>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal1" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Leyenda de la figura</h4>
+							</div>
+							<div class="modal-body">
+								<p>
+								La Figura muestra en el eje vertical el rendimiento de grano expresado como diferencia porcentual (DIF) respecto del promedio de todos los cultivares comparados y en el eje horizontal muestra la estabilidad de DIF expresada como coeficiente de variación entre años (CV). El CV es el cociente porcentual entre el desvío estándar de DIF y el rendimiento promedio. Las líneas gruesas muestran el promedio de cada eje.
+								<br><br> 
+								Desde el punto de vista de este análisis, un cultivar será más favorable cuanto mayor sea su valor en el eje vertical y menor en el eje horizontal. Los detalles del método de análisis se pueden consultar en <a href="Abbate, Aguate, Del Vecchio, Balzarini. 517.pdf">Abbate et al. (2016)</a>.
+								<br><br> 
+								Presionando un punto se podrá ver el nombre del cultivar, su grupo de calidad (GC) y los valores de los ejes. 
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<p id="Leyenda_figura">Presionando un punto se podrá ver el nombre del cultivar, su grupo de calidad (GC) y los valores de los ejes.
+				<!--<button type="button" class="btn-link" onclick="copyToClipboard('#figura')">Copiar figura.</button>-->
+				</p>
+				<div id="figura"></div>
+			</div>
+
+	    <div class="col-md-6">
+				<!-- Botón de la Leyenda Tabla -->
+				<div id="boton2">	
+					<button type="button" class="btn btn-info btn-lg botonmodal" data-toggle="modal" data-target="#myModal2">Ver leyenda completa de la Tabla</button>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal2" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Leyenda de la tabla</h4>
+							</div>
+							<div class="modal-body">
+								<p>
+								Las columnas de la Tabla muestran: <br>
+								<ol>
+									<li>El cultivar.</li>
+									<br>
+									<li>El Grupo de calidad del cultivar (GC) (1 corresponde a la mejor calidad). </li>
+									<br>
+									<li>La diferencia de rendimiento porcentual respecto del promedio de cada ensayo (DIF), correspondiente al eje vertical de la figura.</li>
+									<br>
+									<li>El coeficiente de variación porcentual (CV), correspondiente al eje horizontal de la figura. El CV es el cociente porcentual entre el desvío estándar de DIF y el rendimiento promedio.</li>
+								</ol>
+								<br>
+								La Tabla facilita la comparación de cultivares específicos. Ordenando los datos por DIF o CV ayuda a comparar cultivares por rendimiento o estabilidad. Ordenando los datos por GC ayuda a comparar cultivares de un mismo o distinto grupo de calidad. <br><br>
+								Para ordenar los datos de la Tabla, presionar el encabezado de la columna correspondiente.
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default botoninmodal" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p id="Leyenda_tabla">Presionando el encabezado una columna, la tabla quedará ordenada por el valor de la columna elegida. 
+				</p>
+				<div id="tabla"></div>
+			</div>
+	  </div>
+	</div>	
+<script>
+		document.getElementById('tabla').style.visibility = 'hidden';  
+		document.getElementById('figura').style.visibility = 'hidden';  	
+		document.getElementById('boton1').style.visibility = 'hidden';  	
+		document.getElementById('boton2').style.visibility = 'hidden';  	
+		document.getElementById('Leyenda_figura').style.visibility = 'hidden';
+		document.getElementById('Leyenda_tabla').style.visibility = 'hidden';
+</script>
+<div id="label2"></div> <!--Para depuracion-->
+
+<br>
+<h5>ARTÍCULOS SOBRE ESTA PÁGINA</h5>
+<div id="banner">
+	<a href="https://news.agrofy.com.ar/noticia/180217/esta-herramienta-online-te-ayuda-elegir-que-variedad-trigo-sembrar"><img class="imagen" src ="logos\logo_agrofynews.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;	
+	<a href="https://www.lavozdelpueblo.com.ar/web/noticia/83318-Las-comparaciones-no-son-odiosas"><img class="imagen" src ="logos\logo_La_voz_del_pueblo_2.jpg" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://www.elpopular.com.ar/nota/130585/las-comparaciones-no-son-odiosas?fbclid=IwAR2KVL7SQ_H4BvyZebF0kebhDnZMTbneQoF3lGLWs7P8jvs8rvz2LBs0KaE"><img class="imagen" src ="logos\logo_diario_el_popular.jpg" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://www.engormix.com/agricultura/articulos/informe-online-rendimiento-cultivares-t43505.htm"><img class="imagen" src ="logos\logo_engormix_4.jpg" width="7%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://dib.com.ar/gestion/archivos/suplementos/5cd20728abe15.pdf"><img class="imagen" src ="logos\logo_diarios_bonaerenses.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://fmsonidos.com.ar/nota/6310/ahora-podes-elegir-que-variedad-de-trigo-sembrar-a-traves-de-una-pagina-web"><img class="imagen" src ="logos\logo_fm_sonidos_2.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://www.zonacampo.com.ar/agricultura/una-plataforma-online-para-elegir-que-variedad-de-trigo-sembrar"><img class="imagen" src ="logos\logo_zona_campo.png" width="10%"></a>
+	<br><br>
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://puradata.com.ar/ingeniero-agronomo-y-su-hijo-desarrollaron-una-herramienta-online-para-elegir-que-variedad-de-trigo-sembrar/"><img class="imagen" src ="logos\logo_pura_data.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="https://diariolaopinion.com.ar/noticia/248042/herramienta-online-ayuda-a-elegir-variedad-de-trigo-a-sembrar"><img class="imagen" src ="logos\logo_la_opinion.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://www.lavozdesanjusto.com.ar/suplementos/articulo/una-herramienta-on-line-ayuda-a-elegir-que-variedad-de-trigo-sembrar--60938"><img class="imagen" src ="logos\logo_la_voz_de_san_juan.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://clicdenoticias.com/una-herramienta-online-ayuda-a-elegir-que-variedad-de-trigo-sembrar/"><img class="imagen" src ="logos\logo_clic_de_noticias.png" width="5%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://sembrandonoticias.com/herramienta-online-ayuda-a-elegir-que-variedad-de-trigo-sembrar/"><img class="imagen" src ="logos\logo_sembrando_noticias.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://www.laarena.com.ar/el_pais-ahora-podes-elegir-que-variedad-de-trigo-sembrar-a-traves-de-una-pagina-web-2049469-113.html"><img class="imagen" src ="logos\logo_la_arena.png" width="10%"></a>
+	&nbsp;&nbsp;&nbsp;
+	<a href="http://www.cronistalascolonias.com.ar/?p=50948"><img class="imagen" src ="logos\logo_cronista_las_colonias.png" width="10%"></a>
+	</div>
+
+<!--Botón Compartir de Facebook-->
+<!--
+<div class="fb-share-button" 
+	data-href="http://abbate.000webhostapp.com/" 
+	data-layout="button" data-size="large" 
+	data-mobile-iframe="true">
+	<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a>
+	<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&mobile_iframe=true&width=99&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">
+	</iframe>	
+</div>
+-->
+
+<div id="footer">
+	<p id="ultima_actualizacion"></p>
+		<script>
+			var t = "Puede enviar sus dudas, sugerencias o comentarios a abbate.pablo@gmail.com. Los autores de esta página no son responsables del uso que se le de a la información suministrada, ni de los daños o perjuicios directos o indirectos que ella pueda causar. Fecha de la primera versión: 22-jul-2018. Fecha de última actualización: "+Ultima_Actualizacion()+". Copyright 2019.-";
+			document.getElementById("ultima_actualizacion").innerHTML=t;
+		</script>
+</div>
+</body>
+</html>

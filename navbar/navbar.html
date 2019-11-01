@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- fuentes Righteous y Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- JS Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/212cdc8d2f.js" crossorigin="anonymous"></script>
+
+    <!-- logo del sitio [AGREGAR LOGO]-->
+    <link rel="shortcut icon" href="" type="image/png" />
+    <link rel="apple-touch-icon" href="" type="image/png" />
+
+    <!-- Código del CSS -->
+    <link rel = "stylesheet" type = "text/css" href = "navbar.css" />
+ 
+
+    <title> NEXXOS </title>
+
+</head>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<body class="fondo">
+
+    <!-- navbar para pc -->
+    <div class="desktop-only">
+        <ul class="navbar">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Participar</a></li>
+            <li><a href="#">Noticias</a></li>
+            <li><a href="#">Sedes</a></li>
+            <li><a href="#">Cómo ayudar</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- navbar para celular (sidenav) -->
+
+    <div class="mobile-only">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Inicio</a>
+            <a href="#">Institucional</a>
+            <a href="#">Participar</a>
+            <a href="#">Noticias</a>
+            <a href="#">Sedes</a>
+            <a href="#">Cómo ayudar</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <!-- header de celular -->
+        <div id="selector">
+            <div class="barraroja">
+                <div style="float: left">
+                    <span id="burger" style="color:black; font-size: 32px; cursor: pointer" onclick="openNav()">
+						&#9776;
+					</span>
+                </div>
+                <div  style="margin: 2px 0px; max-height: 45px;">
+                    <h6 id="logosidenav" style="color:black; font-family: righteous; font-size: 18px; text-align: left; right: 56px;">CULTIVARES<br>ARGENTINOS</p></h6>
+                    <i class="fas fa-seedling" style="color:black; font-size: 36px; float: right; right: 0; margin: 1px 10px;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Acá comienza el contenido del sitio -->
+
+</body>
+</html>
