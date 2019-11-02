@@ -1,0 +1,439 @@
+   :root {
+    --color-main:#FFD200;
+    --color-2:hsl(74, 90%, 48%);
+    --color-3:#FF6C00;
+    --color-3:#21FF0D;
+    --color-4:#EB8D00; 
+    --color-bg:rgb(255, 253, 245);
+    --color-navbar-text:black;
+  }
+   
+  html,body {
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+
+   /* NAVBAR PARA PC */
+    
+    .navbar {
+        width: 100%;
+        display: inline-block;
+        padding: 0;
+        list-style: none;
+        margin-left: 0px;
+        text-align: center;
+        background-color: var(--color-main);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+        font: bold;
+        margin-bottom: -3px;
+        height: 52px;
+    }
+    
+    .navbar li {
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .navbar li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        -webkit-transition: .5s all;
+        /*formato del texto para ambas navs*/
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: medium;
+        text-transform: uppercase;
+        color: var(--color-navbar-text);
+    }
+    
+    .navbar li a:hover {
+        background-color:var(--color-4);
+    }
+    /* SIDENAV PARA CELULARES */
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: var(--color-main);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+        /*formato del texto para ambas navs*/
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: medium;
+        text-transform: uppercase;
+        color:var(--color-navbar-text);
+    }
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    /* Barra superior cuando la side esta cerrada */
+    
+    .barraroja {
+        background-color: var(--color-main);
+        display: block;
+        height: 43px;
+        line-height: 1.3;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    #logosidenav {
+        max-width: 80vw;
+        position: absolute;
+        right: 0;
+        margin:0 2px !important;
+        display: block;
+    }
+    
+    #burger {
+        padding-left: 10px;
+        color: var(--color-navbar-text);
+    }
+    
+    #seed {
+        padding: 6px 10px 0 0;
+        color: var(--color-navbar-text);
+    }
+    /*MEDIA PARA QUE CAMBIE SEGÚN EL TAMAÑO DE PANTALLA */
+    /*solo aparece cuando es pantalla pequeña*/
+    
+    .mobile-only {
+        display: none;
+    }
+    /*para pantallas pequeñas*/
+    
+    .desktop-only {
+      height: 52px;
+    } 
+
+    @media (max-width: 600px) {
+        .mobile-only {
+            display: block !important;
+        }
+        .desktop-only {
+            display: none !important;
+        }
+    }
+    
+    .col-xs {
+        display: inline;
+    }
+    
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    /*Fin NAVBAR */
+    
+    body {
+        background-color: var(--color-bg);
+    }
+    
+
+    /*Para PC*/
+    
+    .sshow {
+        width: 960px;
+        height: 640px;
+        margin: 30px auto;
+    }
+    
+/*CONTENT*/
+
+/* Parallax */
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+* {
+  font-family: 'lato';
+}
+body {
+  margin: 0;
+}
+.parallax-wrapper {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100% - 52px);
+}
+.background {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+}
+
+.background2 {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 50vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(3);
+}
+
+.background--spring {
+  background-image: url(https://images.unsplash.com/photo-1529159942819-334f07de4fe5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+}
+.background--summer {
+  background-image: url('https://images.pexels.com/photos/375152/summer-sun-blooming-season-375152.jpeg?cs=srgb&dl=beautiful-bloom-blossom-375152.jpg&fm=jpg');
+}
+.background--fall {
+  background-image: url('https://images.pexels.com/photos/33060/road-forest-season-autumn.jpg?cs=srgb&dl=autumn-fall-forest-33060.jpg&fm=jpg');
+}
+.background--winter {
+  background-image: url('https://images.pexels.com/photos/235595/pexels-photo-235595.jpeg?cs=srgb&dl=branches-cold-season-235595.jpg&fm=jpg');
+}
+
+.title {
+  position: absolute;
+  margin: auto;
+  top: calc(50% - 60px);
+  width: 75%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  height: 100px;
+  color: white;
+  font-size: 40px;
+}
+
+.title2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  height: 100px;
+  color: black;
+  font-size: 27px;
+}
+
+.season-desc {
+  z-index: 1;
+  position: relative;
+  background: #282E34;
+  color: white;
+  font-size: 2.5vh;
+  letter-spacing: 2px;
+  line-height: 4.5vh;
+  padding: 3rem;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+  .desc-wrapper {
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .season--title {
+    text-align: center;
+    font-size: 200%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+  .season--about {
+    margin-top: 50px;
+    padding: 0;
+  }
+}
+@media (max-width: 998px) and (orientation: portrait) {
+  .season-desc {
+    padding: 1.5rem 20px;
+    font-size: 1rem;
+    height: unset;
+    min-height: 100vh;}
+    .season-title {
+      font-size: 2.5rem;
+      margin: 20px 0;
+      letter-spacing: unset;
+     }
+    .season-about {
+      margin-top: 20px;
+     }
+   }
+
+ /* CSS Importado */
+
+ #analisis {
+  background-color: var(--color-main);
+  padding-top: 50px;
+ }
+
+ .container {	
+  margin-bottom: 2%;
+}
+.gyt {
+  margin-top: -4%;
+}
+#form3, #form5 {
+  margin-top: 6%;
+}
+.linkform {
+  padding: 0px !important;
+  margin:1rem 0 .5rem 0;;
+  font-weight: bold;
+  line-height: 1.4;
+}
+#label1 {
+  text-align: center;
+  font-size: 120%;
+  margin-top: 5%;
+}
+p {
+  margin-top: 1rem;  /* PEA: Dejo el doble de margen para que se vea bien en el celu */
+  margin-bottom: 0.5rem; /* PEA: Es el margen de los controles de google chart */
+  padding-left: 0.5%; /*PEA: para que se vea bien en celu*/
+  padding-right: 0.5%; /*PEA: para que se vea bien en celu*/		
+}	
+a {
+  cursor: pointer; /*Estable el estilo del mouse sobre los links*/
+}
+#figura, #tabla {
+  margin: auto;
+  width: max-content;
+  border: 1px solid #a9a9a9;
+  background: white; /*Para resolver problemas con Mozilla*/
+}
+/* PEA: misma altura y color para todos los controles desplegables*/
+#lugar, #anios, #manejos, #epocas {
+height: 26px;
+  border: 1px solid #a9a9a9;
+}
+#epocas{ /*PEA: Definen el ancho de los controles antes de que se carguen*/
+  width: 110px;
+}
+.button, input, optgroup, select, textarea {
+font-weight: bold;
+}
+.charts-menu-button-inner-box {
+/*background: #fefefe;  */
+  background: white;  
+}
+.botonmodal {
+  padding: 0 1%;
+  height: 24px;
+  font-size: small;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.botoninmodal {
+  padding: 0 1%;
+  height: 24px;
+  font-size: small;
+  display: block;
+  margin: auto;
+}
+#tabla1 {
+  background: #fefefe;
+  border: 1px solid #a9a9a9;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1%; /*Para alinear con los otros controles*/
+}
+#tabla1 .table {
+  border-collapse: collapse;
+}	
+#footer {
+  width: 100%;
+  height: 3%;
+  background-color:#00577B;
+}
+#ultima_actualizacion, #pfooter {
+  padding: .5% 5% .5% 5%;
+  color: white;
+}
+:focus {
+  outline: none;
+}
+#banner {
+  text-align: center;
+  width: 100%;
+}
+.images {
+  display: inline-block;
+  margin: 0 2.10%;
+}
+/* VERSION MOVIL */
+@media (min-width: 400px) {
+  #lugar, #tabla1 { /*PEA: Define el ancho de los controles antes de que se carguen*/
+      width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  #lugar, #tabla1 { /*PEA: Define el ancho de los controles antes de que se carguen*/
+      width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  #figura, #tabla, #lugar { /*PEA: Define el ancho de los controles antes de que se carguen*/
+      max-width: 100%;
+  }
+  h1 {
+      padding-left: 5%;
+      padding-right: 5%;
+      font-size: large;
+      font-weight: bold;
+  }
+  h2, h5 {
+      font-family: Arial; 
+      font-size: small;
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+  h3 {
+      font-size: small;
+      text-align: left;			
+  }
+  .comentarios {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+  #form3, #form5 {
+      margin-top: 0%;
+  }
+}
